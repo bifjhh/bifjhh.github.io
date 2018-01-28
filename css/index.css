@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.section {
+    overflow: hidden;
+    position: relative;
+}
+.first {
+    padding-top: 80px;
+}
+
+.first .logo {
+    background: url("../images/logo.png");
+    width: 251px;
+    height: 186px;
+    margin: 0 auto;
+
+}
+
+.first .text {
+    width: 100%;
+    text-align: center;
+    margin-top: 80px;
+
+}
+
+.first .text img {
+    margin: 0 30px;
+    opacity: 0.5;
+    transition: margin 1s, opctity 1s;
+}
+
+.first.current .text img {
+    margin: 0 5px;
+    opacity: 0.9;
+}
+
+.first .intro {
+    background: url("../images/info_1.png");
+    width: 772px;
+    height: 49px;
+    margin: 40px auto;
+}
+
+/*第二*/
+.second >div {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.second .shield {
+    width: 440px;
+    font-size: 0;
+
+}
+.second .shield img {
+    transition: transform 1s;
+}
+.second .shield > img:nth-of-type(1){
+    transform: translate(100px,100px) rotate(30deg);
+}
+.second .shield > img:nth-of-type(2){
+    transform: translate(-100px,-100px) rotate(-30deg);
+}
+.second .shield > img:nth-of-type(3){
+    transform: translate(200px,200px) rotate(60deg);
+}
+.second .shield > img:nth-of-type(4){
+    transform: translate(-200px,-200px) rotate(-60deg);
+}
+.second .shield > img:nth-of-type(5){
+    transform: translate(150px,150px) rotate(90deg);
+}
+.second .shield > img:nth-of-type(6){
+    transform: translate(50px,150px) rotate(-90deg);
+}
+.second .shield > img:nth-of-type(7){
+    transform: translate(-150px,-150px) rotate(60deg);
+}
+.second .shield > img:nth-of-type(8){
+    transform: translate(10px,-250px) rotate(-90deg);
+}
+.second .shield > img:nth-of-type(9){
+    transform: translate(-250px,10px) rotate(45deg);
+}
+
+.second .info {
+    background: url("../images/info_2.png");
+    width: 635px;
+    height: 309px;
+}
+.second.current .shield img {
+    transform:none;
+}
+
+/*第三*/
+.third {
+    position: relative;
+}
+.third .info{
+    background: url("../images/info_3.png ");
+    width: 631px;
+    height: 278px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-100%,-50%);
+}
+.third .circle {
+    background: url("../images/circle.png");
+    width: 453px;
+    height: 449px;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(120%,-50%);
+}
+.third .circle .rocket {
+    background: url("../images/rocket.png");
+    width: 203px;
+    height: 204px;
+    position: absolute;
+    left:-150%;
+    top:200%;
+    transition: left 1s, top 1s;
+}
+
+.third.current .circle .rocket{
+    left:30%;
+    top:25%;
+}
+
+/*第四*/
+
+.fourth .searcherBox {
+    width: 529px;
+    height: 438px;
+    position: absolute;
+    overflow: hidden;
+    top:50%;
+    left:50%;
+    transform: translate(-115%,-50%);
+}
+.fourth .searcherBox .searcher {
+    background: url("../images/search.png");
+    width: 529px;
+    height: 66px;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: left 1s;
+}
+.fourth .searcherBox .searchText {
+    background: url("../images/key.png");
+    width: 0px;
+    height: 22px;
+    position: absolute;
+    top: 24px;
+    left: 20px;
+    /*left: 20px;*/
+    transition: width 1.2s 1.4s steps(5);
+}
+.fourth .searcherBox .searchResult {
+    background: url("../images/result.png");
+    width: 529px;
+    height: 0px;
+    position: absolute;
+    top:53px;
+    left: 0;
+
+    transition: height 1s 2.8s;
+}
+.fourth.current .searcherBox .searcher{left: 0px;}
+.fourth.current .searcherBox .searchText{width: 99px;}
+.fourth.current .searcherBox .searchResult{height: 372px;}
+.fourth .info {
+    background: url("../images/info_4.png");
+    width: 612px;
+    height: 299px;
+    position: absolute;
+    top:50%;
+    right:50%;
+    transform: translate(100%,-50%);
+}
+
+/*第五*/
+.fifth {
+
+}
+.fifth > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+/*    box-sizing: border-box;
+    padding-bottom:5px;*/
+}
+.fifth .info {
+    background: url("../images/info_5.png");
+    width: 1077px;
+    height: 134px;
+    margin: 0 auto;
+}
+.fifth .browser {
+
+    background: url(../images/toolbar.png) no-repeat top,
+    url(../images/extra.png) no-repeat bottom right;
+    width: 1004px;
+    height: 100%;
+    margin:0 auto;
+    flex: 1;
+    position: relative;
+    /*overflow: hidden;*/
+}
+
+.fifth .browser .left{
+    width: 2px;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    left:0px;
+    top: -200%;
+    transition: top 1.3s;
+}
+.fifth .browser .right{
+    width: 2px;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    right: 0px;
+    bottom: -200%;
+    transition: bottom 1.3s;
+}
+.fifth .browser .top {
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    top:0px;
+    right: -200%;
+    transition: right 1.3s;
+}
+.fifth .browser .bottom {
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0px;
+    left: -200%;
+    transition: left 1.3s;
+
+}
+.fifth.current .browser .left {top: 0;}
+.fifth.current .browser .right {bottom: 0;}
+.fifth.current .browser .top {right: 0;}
+.fifth.current .browser .bottom {left: 0;}
+
+
+
+
+
+
