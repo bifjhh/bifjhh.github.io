@@ -10,7 +10,9 @@ html, body, ul, li, img, a, p, div, form, input, h2, button, footer {
     /*去除移动端特有的点击高亮效果*/
     -webkit-tap-highlight-color: transparent;
 }
-
+html,body{
+    min-width: 750px;
+}
 body {
     font-family: "微软雅黑", sans-serif;
 }
